@@ -12,7 +12,6 @@ int main(void)
 		{
 			if (c == 'q' || c == 'e')
 			{
-				c++;
 			}
 			else
 			{
