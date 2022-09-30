@@ -1,11 +1,15 @@
 #include "main.h"
 
+/**
+ * _abs - Returns the abolute of a number
+ * Return: r
+ * @r: Variable
+ */
 int _abs(int r)
 {
 	if (r < 0)
 	{
-		_putchar(-r);
+		return (-r);
 	}
-	_putchar(r);
-	return (0);
+	return (r);
 }
