@@ -2,12 +2,12 @@
 
 int _islower(int c)
 {
-	if (c <= 'z' || c >= 'a')
+        if (_islower(c))
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
-	}	
+	}
 }
