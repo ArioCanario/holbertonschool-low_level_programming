@@ -3,17 +3,20 @@
 
 /**
  * main - This is a description
+ * print_alphabet - This is a description
  * Return: 0
  */
-
 int main(void)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
+	void print_alphabet(void)
 	{
-		print_alphabet(c);
+		char c;
+
+		for (c = 'a'; c <= 'z'; c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+		return;
 	}
-	_putchar('\n');
-	return (0);
 }
