@@ -16,31 +16,31 @@ void times_table(void)
 			if ((n * m) <= 9)
 			{
 				_putchar((n * m) + '0');
-				if (n == 9)
-				{
-					_putchar(10);
-				}
-				else if (n < 9)
-				{
+				if (n < 9)
+				{	_putchar(44);
 					_putchar(32);
-					_putchar(32);
-					_putchar(44);
-				}
+				_putchar(32); }
+				else if ((n * m) > 10)
+				{	_putchar(44);
+					_putchar(32); }
+				else
+				{	_putchar(10); }
 			}
 			else
-			{
-				_putchar(((n * m) / 10) + '0');
+			{	_putchar(((n * m) / 10) + '0');
 				_putchar(((n * m) % 10) + '0');
 				if (n == 9)
 				{
-					_putchar(10);
-				}
-				else if (n < 9)
+					_putchar(10); }
+				else if ((n * m) < 9)
 				{
-					_putchar(32);
-					_putchar(32);
 					_putchar(44);
+					_putchar(32);
+					_putchar(32);
 				}
+				else if ((n * m) > 9)
+				{_putchar(44);
+					_putchar(32); }
 			}
 		}
 	}
