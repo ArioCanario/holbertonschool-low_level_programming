@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * more_numbers - Prints the numbers from 0 to 14
+ * Return: Nothing
+ */
+
 void more_numbers(void)
 {
 	int c, a;
@@ -10,7 +15,7 @@ void more_numbers(void)
 		{
 			if (c > 9)
 			{
-				_putchar((c / 10) + '0');	
+				_putchar((c / 10) + '0');
 			}
 			_putchar((c % 10) + '0');
 		}
