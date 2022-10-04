@@ -15,22 +15,22 @@ int main(void)
 		if ((c % 3) == 0 && (c % 5) == 0)
 		{
 			printf("FizzBuzz");
-			printf(" ");
 		}
 		else if ((c % 3) == 0)
 		{
 			printf("Fizz");
-			printf(" ");
 		}
 		else if ((c % 5) == 0)
 		{
 			printf("Buzz");
-			printf(" ");
 		}
 		else
 		{
 			printf("%d", c);
-			printf(" ");
+		}
+		if (c < 100)
+		{
+		printf(" ");
 		}
 	}
 	printf("\n");
