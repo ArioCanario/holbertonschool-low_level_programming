@@ -4,4 +4,4 @@ OBJ = *.o
 NAME = school
 
 all:
-	${CC} -c -o ${OBJ} ${SRC} ${NAME} 
+	${CC} ${OBJ} ${SRC} -o ${NAME} 
