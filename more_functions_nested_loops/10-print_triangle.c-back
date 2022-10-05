@@ -1,0 +1,26 @@
+#include "main.h"
+
+void print_triangle(int size)
+{
+	int spaces, character, times;
+
+	if (size > 0)
+	{
+		for (times = size; times >= 1; times--)
+		{
+			for (spaces = (size - 1); spaces > 0; spaces--)
+			{
+				_putchar(32);
+			}
+			for (character = (size - spaces); character > 0; character--)
+			{
+				_putchar(35);
+			}
+		}
+		_putchar(10);
+	}
+	else
+	{
+		_putchar(10);
+	}
+}
