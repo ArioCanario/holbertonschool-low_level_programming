@@ -15,7 +15,7 @@ void puts_half(char *str)
 	{
 		l++;
 	}
-		if ((l % 2) == 0)
+		if ((l % 2) != 0)
 		{
 			for (i = (l / 2); (i <= l && (i % 2) != 0) || ((i % 2) == 0); i++)
 			{
@@ -28,14 +28,14 @@ void puts_half(char *str)
 		else
 		{
 			int i = ((l / 2) + 1);
+
 			for (i = (l / 2); (i <= l && (i % 2) != 0) || ((i % 2) == 0); i++)
 			{
-                       		if (str[i] != '\0')
+				if (str[i] != '\0')
 				{
 					_putchar(str[i]);
 				}
 			}
 		}
-	
 	_putchar(10);
 }
