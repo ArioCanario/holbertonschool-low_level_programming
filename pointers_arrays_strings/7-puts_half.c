@@ -25,7 +25,7 @@ void puts_half(char *str)
 				}
 			}
 		}
-		else
+		else if ((l % 2) == 0)
 		{
 			int i = ((l / 2) + 1);
 
