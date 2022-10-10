@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * *_strncat - concatenate a string
+ * @dest: This is a pointer
+ * @src: This is another pointer
+ * Return: dest
+ * @n: Limit of bytes
+ */
+
 char *_strncat(char *dest, char *src, int n)
 
 {
