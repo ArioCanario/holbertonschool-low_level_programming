@@ -17,7 +17,7 @@ char *_strncat(char *dest, char *src, int n)
 			i++;
 		}
 	}
-	else if ((n > i) && (i >= 0))
+	else if ((n > i) && (i != 0))
 	{
 		for (j = 0; j < n; j++)
 		{
