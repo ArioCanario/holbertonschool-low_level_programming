@@ -1,36 +1,25 @@
 #include "main.h"
 
 /**
- * *_strncpy - concatenate a string
- * @dest: This is a pointer
- * @src: This is another pointer
+ * *_strncpy - Copy a string to another pointer
  * Return: dest
- * @n: Limit of bytes
+ * @dest: destinatio pointer
+ * @src: source pointer
+ * @n: Max bytes
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
-	int j = 0;
 
-	for (; dest[i] != '\0'; i++)
+	for (; src[i] != '\0'; i++)
 	{
+		if (i < n)
+		dest[i] = src[i];
 	}
-	if (n < i)
+	for (; i < n; i++)
 	{
-		for (j = 0; j < n; j++)
-		{
-			dest[i] = src[j];
-			i++;
-		}
-	}
-	else if ((n > i) && (i != 0))
-	{
-		for (j = 0; j < n; j++)
-		{
-			dest[i] = src[j];
-			i++;
-		}
+		dest[i] = '\0';
 	}
 	return (dest);
 }
