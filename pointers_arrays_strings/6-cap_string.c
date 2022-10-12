@@ -19,7 +19,7 @@ char *cap_string(char *a)
 
 	for (l = 0; a[l] != '\0'; l++)
 	{
-		for (j = 0; sep[j] <= 12; j++)
+		for (j = 0; j <= 12; j++)
 		{
 			if (a[l] == sep[j] && (a[l + 1] >= 97 && a[l + 1] <= 122))
 			{
