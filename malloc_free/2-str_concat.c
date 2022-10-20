@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * str_concat - Concatenates 2 strings
+ * Return: NULL if the program fails, conc in success
+ * @s1: First string
+ * @s2: Second string
+ */
+
 char *str_concat(char *s1, char *s2)
 {
 	unsigned int i, j, k, l;
@@ -26,17 +33,18 @@ char *str_concat(char *s1, char *s2)
 
 	conc = malloc(sizeof(char) * (i + j) + 1);
 
+	if (conc == NULL)
+	{
+		return (NULL);
+	}
+
 	for (k = 0; k < i; k++)
 	{
-		conc[k] = s1 [k];
+		conc[k] = s1[k];
 	}
 	for (l = 0; (k + l) < (i + j); l++)
 	{
 		conc[k + l] = s2[l];
-	}
-	if (conc == NULL)
-	{
-		return (NULL);
 	}
 	return (conc);
 }
