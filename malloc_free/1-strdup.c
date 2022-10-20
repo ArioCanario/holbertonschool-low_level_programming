@@ -6,7 +6,7 @@ char *_strdup(char *str)
 	unsigned int i, j;
 	char *nstr;
 
-	if(str == NULL)
+	if(str == NULL || str[0] = '\0')
 	{
 		return (NULL);
 	}
@@ -18,14 +18,14 @@ char *_strdup(char *str)
 		return(NULL);
 	}
 
-	nstr = malloc(sizeof(char) * j);
+	nstr = malloc(sizeof(char) * (j + 1));
 
 	if (nstr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= j; i++)
+	for (i = 0; i < j; i++)
 	{
 		nstr[i] = str[i];
 	}
