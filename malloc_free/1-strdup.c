@@ -6,7 +6,7 @@ char *_strdup(char *str)
 	unsigned int i, j;
 	char *nstr;
 
-	if(str == NULL || str[0] = '\0')
+	if(str == NULL || str[0] == '\0')
 	{
 		return (NULL);
 	}
