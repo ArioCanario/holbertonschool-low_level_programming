@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 	{
 		str[i] = c;
 	}
-	if (str[0] == '\0')
+	if (str == '\0')
 	{
 		return (NULL);
 	}
