@@ -9,7 +9,8 @@
 
 void print_dog(struct dog *d)
 {
-	char* n = NULL
+	char* n = NULL;
+
 	if (d)
 	{
 		if (d->name)
