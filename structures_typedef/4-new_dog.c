@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
+#include <stddef.h>
 
 /**
  * new_dog - Copy a struct to another
