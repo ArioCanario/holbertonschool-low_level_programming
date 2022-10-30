@@ -12,7 +12,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newdog;
+	dog_t *newdog = NULL;
 
 	if (name != NULL && owner != NULL)
 	{
@@ -60,16 +60,16 @@ char *_strdup(char *str)
 	{
 	}
 
-	nstr = malloc(sizeof(char) * (j + 1));
+	array = malloc(sizeof(char) * (j + 1));
 
-	if (nstr == NULL)
+	if (array == NULL)
 	{
 		return (NULL);
 	}
 
 	for (i = 0; i < j; i++)
 	{
-		nstr[i] = str[i];
+		array[i] = str[i];
 	}
-	return (nstr);
+	return (array);
 }
