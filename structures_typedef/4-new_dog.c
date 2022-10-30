@@ -60,16 +60,16 @@ char *_strdup(char *str)
 	{
 	}
 
-	array = malloc(sizeof(char) * (j + 1));
+	nstr = malloc(sizeof(char) * j + 1);
 
-	if (array == NULL)
+	if (nstr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i < j; i++)
+	for (i = 0; i <= j; i++)
 	{
-		array[i] = str[i];
+		nstr[i] = str[i];
 	}
-	return (array);
+	return (nstr);
 }
