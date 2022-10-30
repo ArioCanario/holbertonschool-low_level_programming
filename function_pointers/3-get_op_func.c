@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * get_op_func - Select the correct operator
+ * Return: Operator
+ * @s: Operator writed by the user
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
