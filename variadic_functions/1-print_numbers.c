@@ -18,7 +18,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (c = 0; c < n; c++)
 	{
-		printf("%d%s", va_arg(args, int), separator);
+		printf("%d", va_arg(args, int));
+
+		if((c < n - 1))
+		{
+			printf("%s", separator);
+		}
 	}
 	printf("\n");
 	va_end(args);
