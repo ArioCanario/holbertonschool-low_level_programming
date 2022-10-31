@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	float f;
 
 	va_start(args, format);
-	while (format != NULL)
+	if (format != NULL)
 	{
 		while (format[n] != '\0')
 		{
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 					break; }
 				case 's':
 				{	s = va_arg(args, char *);
-					if (s == NULL)
+					while (s == NULL)
 						s = "(nil)";
 					printf("%s", s);
 					check = 1;
