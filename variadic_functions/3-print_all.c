@@ -43,10 +43,10 @@ void print_all(const char * const format, ...)
 					if (s == NULL)
 						s = "(nil)";
 					printf("%s", s);
-					check = 1; } }
+					check = 1;
+					break; } }
 			if (format[n + 1] != '\0' && check == 1)
 				printf(", ");
 			n++; } }
 		printf("\n");
-		va_end(args);
-}
+		va_end(args); }
