@@ -33,7 +33,7 @@ void print_all(const char * const format, ...)
 					check = 1;
 					break; }
 			case 'f':
-				{	f = va_arg(args, int);
+				{	f = va_arg(args, double);
 					printf("%f", f);
 					check = 1;
 					break; }
