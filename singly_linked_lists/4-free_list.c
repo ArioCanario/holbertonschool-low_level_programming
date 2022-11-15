@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+  * free_list - Frees a list
+  * Return: NOthing
+  * @head: Head of the list
+  */
+
 void free_list(list_t *head)
 {
 	if (head)
