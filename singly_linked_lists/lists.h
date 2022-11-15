@@ -22,6 +22,7 @@ int _putchar(char c);
 
 int _puts(char *str);
 
+size_t list_len(const list_t *h);
 
 int _strlen(char *s);
 
