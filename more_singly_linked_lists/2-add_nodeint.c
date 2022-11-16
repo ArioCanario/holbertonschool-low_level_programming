@@ -4,10 +4,10 @@
 #include <stdlib.h>
 
 /**
- * add_node - Adds a new node to a list
+ * add_nodeint - Adds a new node to a list
  * Return: Pointer to head
  * @head: Pointer to the first node
- * @str: String
+ * @n: Number
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
