@@ -10,10 +10,10 @@
  * @str: String
  */
 
-list_t *add_nodeint(list_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	int s;
-	list_t *h = malloc(sizeof(list_t));
+	int s = n;
+	listint_t *h = malloc(sizeof(listint_t));
 
 	if (!h)
 	{
