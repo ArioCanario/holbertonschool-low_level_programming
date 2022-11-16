@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * get_nodeint_at_index - gives the value of a index node
+ * insert_nodeint_at_index - Inserts a node in a index
  * Return: value of the node o nsucces, NULL if it fails
  * @head: Head of the list
- * @index: Index
+ * @idx: Index
+ * @n: value to save in the new node
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
