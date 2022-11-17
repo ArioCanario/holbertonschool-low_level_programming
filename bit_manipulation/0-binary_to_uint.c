@@ -9,11 +9,15 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i = _strlen(b) - 1;
-	int len = _strlen(b) - 1;
+	int i, len;
 	unsigned int num = 0;
 
-	for (; b && i >= 0; i--)
+	if (b == NULL)
+		return (0);
+	i = _strlen(b) - 1;
+	len = _strlen(b) - 1;
+
+	for (; i >= 0; i--)
 	{
 		if (b[i] == '1')
 			num += calc(i, len);
