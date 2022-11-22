@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc > 3)
+	if (argc > 3 || argc < 2)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
@@ -48,7 +48,7 @@ void cp(char *filename_old, char *filename_new)
 		r = read(fd_old, buffer, 1024);
 		if (r == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s", filename_new);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s", filename_old);
  			exit(98);
 		}
 	}
