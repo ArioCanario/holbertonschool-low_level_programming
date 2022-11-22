@@ -40,15 +40,15 @@ void cp(char *filename_old, char *filename_new)
 	while (r != 0)
 	{
 		w = write(fd_new, buffer, r);
-		if (r == -1)
+		if (w == -1)
 		{
  			dprintf(STDERR_FILENO, "Error: Can't write to %s", filename_new);
 			exit(99);
 		}
 		r = read(fd_old, buffer, 1024);
-		if (w == -1)
+		if (r == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", filename_new);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s", filename_new);
  			exit(98);
 		}
 	}
