@@ -35,7 +35,7 @@ void cp(char *filename_old, char *filename_new)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename_old);
 		exit(98);
 	}
-	fd_new = open(filename_new, O_CREAT | O_TRUNC | O_RDWR, 0664);
+	fd_new = open(filename_new, O_CREAT | O_TRUNC | O_RDONLY, 0664);
 	r = read(fd_old, buffer, 1024);
 	while (r != 0)
 	{
