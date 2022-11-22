@@ -36,20 +36,21 @@ void cp(char *filename_old, char *filename_new)
 		exit(98);
 	}
 	fd_new = open(filename_new, O_CREAT | O_TRUNC | O_RDWR, 0664);
-	if (fd_new == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", filename_new);
-		exit(99);
-	}
 	r = read(fd_old, buffer, 1024);
 	while (r != 0)
 	{
-		if (r == -1)
-			exit(1);
 		w = write(fd_new, buffer, r);
-		if (w == -1)
-			exit(1);
+		if (r == -1)
+		{
+ 			dprintf(STDERR_FILENO, "Error: Can't write to %s", filename_new);
+			exit(99);
+		}
 		r = read(fd_old, buffer, 1024);
+		if (fd_new == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s", filename_new);
+ 			exit(98);
+		}
 	}
 	c_old = close(fd_old);
 	if (c_old == -1)
