@@ -45,13 +45,12 @@ void cp(char *filename_old, char *filename_new)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename_new);
 			exit(99);
 		}
-		r = read(fd_old, buffer, 1024);
-	/*	if (r == -1)
+		if (r == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename_old);
 			exit(98);
-		}
-		*/
+		}	
+		r = read(fd_old, buffer, 1024);
 	}
 	c_old = close(fd_old);
 	if (c_old == -1)
