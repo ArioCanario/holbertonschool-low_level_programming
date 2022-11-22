@@ -46,7 +46,7 @@ void cp(char *filename_old, char *filename_new)
 			exit(99);
 		}
 		r = read(fd_old, buffer, 1024);
-		if (fd_new == -1)
+		if (w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", filename_new);
  			exit(98);
