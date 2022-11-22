@@ -45,7 +45,7 @@ void cp(char *filename_old, char *filename_new)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename_old);
 			exit(98);
 		}
-		if (w == -1 || r == -1)
+		if (w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename_new);
 			exit(99);
