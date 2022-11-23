@@ -1,16 +1,16 @@
 #include "lists.h"
 
 /**
- * free_dlist - Frees a list
+ * free_dlistint - Frees a list
  * Return: Nothing
  * @head: Head
  */
 
-void free_dlist(dlistint_t *head)
+void free_dlistint(dlistint_t *head)
 {
 	if (head)
 	{
-		free_dlist(head->next);
+		free_dlistint(head->next);
 		free(head);
 	}
 }
