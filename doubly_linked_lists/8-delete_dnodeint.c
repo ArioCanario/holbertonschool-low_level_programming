@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * delete_nodeint_at_index - Inserts a node in a index
+ * delete_dnodeint_at_index - Inserts a node in a index
  * Return: 1 on succes, -1 if it fails
  * @head: Head of the list
  * @index: Index
