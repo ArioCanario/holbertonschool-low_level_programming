@@ -36,7 +36,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	rm = tmp->next;
 	if (tmp->next->next == NULL)
-		tmp->next == NULL;
+		tmp->next = NULL;
 	else
 	{
 		tmp->next = tmp->next->next;
