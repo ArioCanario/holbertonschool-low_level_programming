@@ -11,7 +11,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new, *tmp;
-	const char *key_dup, *value_dup
+	const char *key_dup, *value_dup;
 	unsigned long int idx;
 
 	if (!ht)
