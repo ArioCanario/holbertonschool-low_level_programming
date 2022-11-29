@@ -9,4 +9,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*---------- Evironment ----------*/
+
+extern char **environ;
+
 #endif

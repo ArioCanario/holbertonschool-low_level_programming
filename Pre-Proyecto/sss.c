@@ -1,7 +1,5 @@
 #include "shell.h"
 
-extern char **environ;
-
 /**
   *
   *
@@ -10,50 +8,44 @@ extern char **environ;
 
 int main(void)
 {
-	char *buff, *argcount, **av = { "/bin/ls", "-l", "/var", NULL };
+	char *buff, *buffdup, **av;
 	size_t bufsize = 0;
-	int fc = 0, status, pid_check, len;
-
+	int ac = 0, status, pid_check, len = 0, argcount = 0;
 
 	while (1)
 	{
-		if (buff == NULL)
-		{
-			printf("Cagaste light");
-			return (0);
-		}
 		printf("$ ");
 		getline(&buff, &bufsize, stdin);
-//		len = strlen(buff[0]);
-//		buff[len - 1] = '\0';
-		argcount = strdup(buff);
-		buff = strtok(buff, " \n"); // Recorrer caracter pot caracter y sumar 1 en los 0 o los newline
-		argcount = strtok(argcount, "  \n");
-		for (len = 0; argcount != '\0'; len++)
+		buffdup = strdup(buff);
+		buff = strtok(buff, " \n");
+		if (buff == NULL)
 		{
-			argcount = strtok(NULL, " \n");
+			printf("Cagaste Light\n");
+			return (-1);
 		}
-		av = malloc(sizeof(char *) * len);
-		printf("%s\n", buff);
+		for (len = 0; buffdup[len] != '\0'; len++)
+			if (buffdup[len] == ' ' || buffdup[len] == '\n')
+				argcount += 1;
+		av = malloc(sizeof(char *) * argcount + 1);
+		if (!av)
+		{
+			printf("Fallo malloc\n");
+			return (-1);
+		}
+		av[0] = buff;
+		for (ac = 1; ac <= argcount; ac++)
+		{
+			av[ac] = strtok(NULL, " \n");
+			if (ac == argcount)
+				av[ac + 1] = NULL;
+		}
 		pid_check = fork();
 		wait(&status);
-//		if (pid_check == 0)
-//		{
-//			printf("%s BUFF 0\n", buff);
-//			printf("%s BUFF 1\n", buff);
-			execve(av[0], av, environ);
-//		}
-
-
-		
-	/*	while (buff != NULL)
+		if (pid_check == 0)
 		{
-			printf("%s", buff);
-			buff = strtok(NULL, " ");;
-			if (buff != NULL)
-			{
-				printf("\n");
-			}
-		} */
+			execve(av[0], av, environ);
+		}
+		free(buffdup);
+		free(av);
 	}
 }
