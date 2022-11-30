@@ -13,4 +13,8 @@
 
 extern char **environ;
 
+/*----------- FUNCTIONS ----------*/
+
+char *_getenv(const char *name);
+
 #endif
